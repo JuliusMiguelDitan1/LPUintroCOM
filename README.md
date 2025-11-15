@@ -14,6 +14,7 @@
 * Alan Domingo
 
 # Update and merge code
-# open terminal then type
-# "git pull origin main" get the updated code in github
-# to merge one must commit your chnages or "git commit -am <name of commit>" first before typing git pull origin main
+*   open terminal then type
+*   "git pull origin main" get the updated code in github
+*   to merge one must commit your chnages or "git commit -am <name of commit>" first 
+    before  typing git pull origin main
