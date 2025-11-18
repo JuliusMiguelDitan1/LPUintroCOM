@@ -225,6 +225,31 @@ main.about-layout {
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+/* View toggle styles */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.view-toggle button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: var(--neutral);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-toggle button:hover {
+  background-color: var(--accent);
+  color: var(--dark);
+}
 
 /* === JOIN PAGE === */
 form {
