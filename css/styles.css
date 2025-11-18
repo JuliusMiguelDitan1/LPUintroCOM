@@ -421,13 +421,7 @@ input[type="submit"]:hover {
   .navbar .nav-links.show { display: flex; }
   .navbar .nav-links a { width: 100%; text-align: center; margin-bottom: 0.5rem; }
   .company-container.grid { grid-template-columns: 1fr; }
-  main {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .aside {
-        flex-direction: column;
-      }
+  main.home-layout {display: flex; flex-direction: column;}
+  .aside {flex-direction: column;}
 }
  
