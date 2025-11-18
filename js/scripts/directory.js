@@ -1,35 +1,44 @@
-function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('show');
+// Embedded company data
+const memberData = {
+  company: [
+    {
+      name: "NovaTech Solutions",
+      address: "123 Innovation Way",
+      phone_number: "+1-415-555-0123",
+      website_url: "https://novatechsolutions.com",
+      image_file: "novatech_logo.png",
+      joined_date: "2023-04-10",
+      notes: "New startup specializing in AI tools"
+    },
+    {
+      name: "BluePeak Systems",
+      address: "456 Skyline Drive",
+      phone_number: "+1-303-555-0175",
+      website_url: "https://bluepeaksystems.com",
+      image_file: "bluepeak_logo.png",
+      joined_date: "2021-09-22",
+      notes: "Gold member with global operations"
     }
+    // ... all your remaining companies
+  ]
+};
 
-    // Footer last modified
-    const full = document.querySelector("#full");
-    const today = new Date(document.lastModified);
-    full.innerHTML = "Last Modified: " + today.toLocaleString();
+let companies = memberData.company;
 
-    const url = 'data/members.json';
-let companies = []; // Global so renderCompanies() can access
-
-// Fetch company data
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    companies = data.company;
-    renderCompanies("grid"); // Default view
-  })
-  .catch(error => console.error("Fetch error:", error));
-
-// View switching
+// Grid/List switcher
 function switchView(view) {
   const container = document.getElementById("company-container");
-  container.className = `company-container ${view}`;
-  renderCompanies(view);
+  if (container) {
+    container.className = `company-container ${view}`;
+    renderCompanies(view);
+  }
 }
 
-// Render companies
+// Render company cards
 function renderCompanies(view) {
   const container = document.getElementById("company-container");
+  if (!container) return;
+
   container.innerHTML = '';
 
   companies.forEach(company => {
@@ -38,7 +47,7 @@ function renderCompanies(view) {
     if (view === "grid") {
       container.innerHTML += `
         <div class="company-card">
-          <img src="images/${company.image_file}" alt="${company.image_file} Logo">
+          <img src="images/${company.image_file}" alt="${company.name} Logo">
           <h2>${company.name}</h2>
           <p><strong>Joined:</strong> ${year}</p>
           <button onclick="showDetails('${company.name}', '${company.address}', '${company.phone_number}', '${company.website_url}', '${company.notes}')">See More</button>
@@ -58,7 +67,12 @@ function renderCompanies(view) {
   });
 }
 
-// Show company details
+// Show details using alert() (kept as requested)
 function showDetails(name, address, phone, website, notes) {
-  alert(`Details for ${name}\n\nAddress: ${address}\nPhone: ${phone}\nWebsite: ${website}\nNotes: ${notes}`);
+  alert(`Details for ${name}
+
+Address: ${address}
+Phone: ${phone}
+Website: ${website}
+Notes: ${notes}`);
 }
