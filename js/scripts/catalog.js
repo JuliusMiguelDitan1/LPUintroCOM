@@ -1,33 +1,33 @@
 const poiData = [
   {
-    "name": "Pagudpud Beach",
-    "address": "Pagudpud, Ilocos Norte",
-    "description": "A northern paradise known for white sand beaches.",
-    "image": "images/Pagudpud Beach.jpg"
+    "name": "Chihuahua", /* changed by Clark */
+    "address": "Pagudpud, Ilocos Norte", /* Si Julius na bahala diyan */
+    "description": "The Chihuahua is commonly known around the world as the smallest dog breed. Chihuahuas are one of the most popular of the smaller dog breeds. This breed is perfect for those that live in a small space. Chihuahuas are extremely loyal dogs and have very playful personalities and are affectionate toward their humans which makes them great family pets. While Chihuahuas can be territorial they are receptive to training.",
+    "image": "../../animal_image/Chihuahua.jpeg"
   },
   {
-    "name": "Mt. Pulag National Park",
+    "name": "Pomeranian", /* changed by Clark */
     "address": "Kabayan, Benguet",
-    "description": "Home to the ‘sea of clouds’.",
-    "image": "images/Mt. Pulag National Park.jpg"
+    "description": "Pomeranians were originally a much larger breed than the standard breed that we see today. The many years of specialized breeding have made Pomeranians decrease in size from a medium-sized dog to a tiny companion-sized dog. Pomeranians hold all of the typical personality traits that you would find in the smaller dog breeds. They are very affectionate and love to hold the attention of their humans as well as being incredibly loyal.",
+    "image": "../../animal_image/Pomeranian.jpeg"
   },
   {
-    "name": "Vigan Heritage Village",
+    "name": "Shih Tzu", /* changed by Clark */
     "address": "Calle Crisologo, Vigan City, Ilocos Sur",
-    "description": "A UNESCO World Heritage Site showcasing Spanish colonial architecture and cobbled streets.",
-    "image": "images/Vigan Heritage Village.JPG"
+    "description": "Shih Tzus are a highly sought-after breed of small dog. They are well-known for being very friendly, alert, and intelligent. The breed is also hypoallergenic which makes them a great option for households with sensitivities. Shih Tzus can be one of the most affectionate breeds but unfortunately, at times this behavior can turn into an over-attachment.",
+    "image": "../../animal_image/Shih Tzu.jpeg"
   },
   {
-    "name": "La Mesa Ecopark",
+    "name": "Pug.jpeg", /* changed by Clark */
     "address": "Quezon City, Metro Manila",
-    "description": "A nature sanctuary offering biking, zip-lining, and family picnics in the city.",
-    "image": "images/La Mesa Ecopark.jpg"
+    "description": "Pugs have always been a popular breed of small dog and one of the breeds with a long history as they have been bred since the Shang Dynasty in 300 BC. This means that Pugs have been the companion dog of choice for over two thousand years. As with some other dog breeds, Pugs were also originally bred as a larger dogs and their size has decreased over time. Pugs are described as having a huge personality for such a small dog and are recommended as the ideal dog for small spaces.",
+    "image": "../../animal_image/Pug.jpeg"
   },
   {
-    "name": "Taal Volcano and Lake",
+    "name": "Bengal Cat",
     "address": "Talisay, Batangas",
-    "description": "A unique volcano-in-a-lake-in-an-island attraction with boat tours and viewing decks.",
-    "image": "images/Taal Volcano and Lake.jpg"
+    "description": "A Bengal cat is a wild-looking cat. Their luxurious coat patterns make them appear more at peace in the forest than that in your house, but they have been tamed. They make great family pets. They are gregarious and need a lot of physical activity like playing fetch.",
+    "image": "../../animal_image/Bengal_Cat:Asian_Leopard_cat.jpg"
   },
   {
     "name": "Mayon Volcano Natural Park",
