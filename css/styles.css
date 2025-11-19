@@ -201,7 +201,7 @@ main.about-layout {
   color: var(--primary);
 }
 
-/* === CATALOG GRID === */
+/* === CATALOG PAGE === */
 .poi-grid {
   padding: 2rem;
   display: grid;
@@ -221,6 +221,98 @@ main.about-layout {
 }
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* Button */
+.card__btn {
+  background-color: var(--accent);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  color: var(--dark);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card__btn:hover {
+  background-color: #ffa000;
+}
+
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img:not(.lazy) {
+  opacity: 1;
+}
+
+/*=== Adopt Page Layout ===*/
+.adopt-container {
+max-width: 900px;
+margin: 2rem auto;
+padding: 1.5rem;
+display: flex;
+gap: 2rem;
+align-items: flex-start;
+justify-content: center;
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.adopt-card img {
+width: 320px;
+height: auto;
+border-radius: 12px;
+object-fit: cover;
+}
+
+
+.adopt-info {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+
+#adoptName {
+font-size: 2rem;
+font-weight: 800;
+}
+
+
+#adoptBreed {
+font-size: 1.3rem;
+font-weight: 600;
+color: var(--primary);
+}
+
+
+#adoptDescription {
+line-height: 1.5;
+font-size: 1rem;
+}
+
+
+/* Button same as card__btn */
+#adoptButton {
+background-color: var(--accent);
+border: none;
+padding: 0.6rem 1.2rem;
+border-radius: 5px;
+color: var(--dark);
+font-weight: 700;
+cursor: pointer;
+transition: background-color 0.3s ease;
+width: fit-content;
+}
+
+
+#adoptButton:hover {
+background-color: #ffa000;
 }
 
 /* === DIRECTORY PAGE === */
@@ -423,5 +515,7 @@ input[type="submit"]:hover {
   .company-container.grid { grid-template-columns: 1fr; }
   main.home-layout {display: flex; flex-direction: column;}
   .aside {flex-direction: column;}
+  .adopt-container {flex-direction: column; text-align: center;}
+  .adopt-card img {width: 100%; max-width: 400px; margin: 0 auto;}
 }
  

@@ -1,7 +1,8 @@
-const spotlight = document.getElementById('spotlight');
-if (spotlight) {
-  const data = [
-   {
+// adopt.js
+// Loads selected animal details from URL parameters
+
+const poiData = [
+  {
     "name": "", /*assigned kayo kung sino pwede mag pangalan*/
     "breed": "Chihuahua", /* Si Julius na bahala diyan */
     "description": "The Chihuahua is commonly known around the world as the smallest dog breed. Chihuahuas are one of the most popular of the smaller dog breeds. This breed is perfect for those that live in a small space. Chihuahuas are extremely loyal dogs and have very playful personalities and are affectionate toward their humans which makes them great family pets. While Chihuahuas can be territorial they are receptive to training.",
@@ -57,16 +58,29 @@ if (spotlight) {
     "image": "../../animal_image/Norwegian_Forest_Cat.jpg",
     "link": ""
   }
-  ];
+];
 
-  const randomIndex = Math.floor(Math.random() * data.length);
-  const place = data[randomIndex];
-
-  spotlight.innerHTML = `
-    <h3>Place Spotlight</h3>
-    <img src="${place.image}" alt="${place.name}" style="width: 100%; border-radius: 6px; margin-bottom: 0.5rem;">
-    <h4>${place.name}</h4>
-    <p><strong>Breed:</strong> ${place.breed}</p>
-    <p>${place.description}</p>
-  `;
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const breedParam = getQueryParam("breed");
+
+  if (!breedParam) return;
+
+  const animal = poiData.find(pet => pet.breed === breedParam);
+
+  if (!animal) return;
+
+  document.getElementById("adoptName").textContent = animal.name || "Unnamed";
+  document.getElementById("adoptBreed").textContent = animal.breed;
+  document.getElementById("adoptDescription").textContent = animal.description;
+  document.getElementById("adoptImage").src = animal.image;
+  document.getElementById("adoptImage").alt = animal.breed + " photo";
+
+  document.getElementById("adoptButton").addEventListener("click", () => {
+    alert(`Thank you for choosing to adopt the ${animal.breed}! We will contact you soon.`);
+  });
+});

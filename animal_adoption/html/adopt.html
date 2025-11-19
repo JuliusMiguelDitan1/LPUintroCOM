@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../images/favicon.ico" />
+  <title>Adopt Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <script defer src="../../js/common.js"></script>
+  <script defer src="../../js/scripts/adopt.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Meet Your New Friend</h1>
+  </header>
+
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="home.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="directory.html">Directory</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </nav>
+
+  <main class="adopt-container">
+    <section class="adopt-card">
+      <img id="adoptImage" alt="Animal image" style="width: 50%; border-radius: 6px; margin-bottom: 0.5rem;"/>
+      <div class="adopt-info">
+        <h2 id="adoptName"></h2>
+        <h3 id="adoptBreed"></h3>
+        <p id="adoptDescription"></p>
+        <button id="adoptButton">Start Adoption Process</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 | Paws Animal Adoption and Welfare | LPU |</p><br>
+    <p id="full"></p>
+  </footer>
+</body>
+</html>
