@@ -14,9 +14,10 @@
 }
 
 /* === GLOBAL TYPOGRAPHY === */
+/*===Changed the entire body background (Allen) */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: var(--neutral);
+  background: url('../background/paw_pattern.jpg'); /* Subtle paw pattern background */
   color: var(--dark);
   line-height: 1.6;
   display: flex;
@@ -45,9 +46,13 @@ header h1 {
   font-weight: 800;
 }
 
+/* === Made the navbar move along as you scroll, Currently checking if I could animate it by JS === */
 .navbar {
   background: #004d40;
-  position: relative;
+  position: sticky; /*made sticky*/
+  top: 0; /* Stick to the top */
+  width: 100%;
+  z-index: 1000;
 }
 .navbar .nav-links {
   display: flex;
