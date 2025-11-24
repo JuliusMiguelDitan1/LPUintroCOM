@@ -18,3 +18,5 @@
 *   "git pull origin main" get the updated code in github
 *   to merge one must commit your chnages or "git commit -am <name of commit>" first 
     before  typing git pull origin main
+
+Allen: Navigation bar will now follow as you scroll, and sorry to be a hassle double check home.html, just in case I did something that shouldn't be there. I change the body background. I plan to make an area transparent in home.html. Will start changing more of the design tomorrow (had now finally understood some of the websites parts, goodnight)
