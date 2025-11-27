@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="../../images/favicon.ico">
-  <title>Catalog - Pawfect Match</title>
+  <title>About - Pawfect Match</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <script src="../../js/common.js" defer></script>
-  <script src="../../js/scripts/catalog.js" defer></script>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to Our Catalog</h1>
+    <h1>Learn About Us</h1>
   </header>
 
   <nav class="navbar">
@@ -29,27 +28,21 @@
       <a href="catalog.html">Catalogs</a>
       <a href="directory.html">Directory</a>
       <a href="About.html">About us</a>
-      <a href="contact_us.html">Contact Us</a>
     </div>
   </nav>
 
-    <main>
-  <template id="card-template">
-    <article class="card">
-      <h2 class="card__title"></h2>
-      <figure class="card__figure">
-        <img width="300" height="200" loading="lazy" />
-        <figcaption class="visually-hidden"></figcaption>
-      </figure>
-      <address class="card__breed"></address>
-      <p class="card__description"></p>
-      <button class="card__btn">Adopt Me</button>
-    </article>
-  </template>
+    <main class="about-layout">
+    <img src="../../images/truth.jpg" alt="profile.jpg">
 
-  <!-- 👇 This is the container your JS is looking for -->
-  <section class="poi-grid"></section>
-</main>
+    <div class="author-info">
+      <h2>Julius Miguel Ditan</h2>
+      <div class="author-bio">
+        <p><strong>Hello!</strong> I’m Julius Miguel Ditan, a web development student from the Philippines. I love turning design into interactive, functional web experiences using HTML, CSS, and JavaScript.</p>
+        <p>This project is part of my journey to mastering front-end development — where I get to apply both logical problem-solving and creative design.</p>
+        <p>When I'm not coding, I'm exploring the world of design systems, user interfaces, and ways to make digital experiences smoother and more meaningful. Thanks for dropping by!</p>
+      </div>
+    </div>
+  </main>
 
     <footer>
         <p>©2025 | Paws Animal Adoption and Welfare | LPU</p>
