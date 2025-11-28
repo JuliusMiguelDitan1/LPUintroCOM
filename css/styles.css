@@ -205,18 +205,18 @@ main.about-layout {
 
 .about-layout img {
     display: block;
-    max-width: 350px;
+    max-width: 550px;
     margin: 0 auto 1rem; /* centers horizontally */
 }
 
-.author-info {
-  margin-top: 1rem;
+.author-info h2 {
+    text-align: center; /* keep heading centered */
 }
 
-.author-bio {
-  line-height: 1.8;
-  font-size: 1.1rem;
+.author-bio p {
+    text-align: left;   /* force paragraphs left-aligned */
 }
+
 .author-bio strong {
   color: var(--primary);
 }
