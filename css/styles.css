@@ -198,6 +198,21 @@ main.about-layout {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
+/* added styles to center the image and text */
+.about-layout {
+    text-align: center;
+}
+
+.about-layout img {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto 1rem; /* centers horizontally */
+}
+
+.author-info {
+  margin-top: 1rem;
+}
+
 .author-bio {
   line-height: 1.8;
   font-size: 1.1rem;
