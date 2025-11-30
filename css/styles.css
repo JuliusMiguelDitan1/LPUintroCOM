@@ -27,6 +27,24 @@ body {
   min-height: 100vh;
 }
 
+body {
+  cursor: url('../Cursor/point.png') 10 10, auto;
+}
+
+*:active {
+  cursor: url('../Cursor/click.png') 10 10 , auto;
+}
+
+*, button, a, .btn {
+  cursor: url('../Cursor/point.png') 10 10, auto !important;
+}
+
+*:active {
+  cursor: url('../Cursor/click.png') 10 10, auto !important;
+}
+
+
+
 h1, h2, h3, h4, h5, h6, nav, .btn {
   font-family: 'Montserrat', sans-serif;
   color: var(--primary);
@@ -235,12 +253,10 @@ main.home-layout {
     background-position: center;
     background-repeat: no-repeat;
   }
-
-/* 📱 Mobile fix */
   @media (max-width: 768px) {
     .hero-image {
-        height: 40vh;           /* shorter height for mobile */
-        background-position: top; /* show important part of image */
+        height: 40vh;          
+        background-position: top; 
     }
   }
 
