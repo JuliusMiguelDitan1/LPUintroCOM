@@ -17,7 +17,7 @@
 /*===Changed the entire body background (Allen) */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: url('../background/background.png'); /* Subtle paw pattern background */
+  background: url('../background/background.png'); 
   background-size: cover;
   background-attachment: fixed;
   color: var(--dark);
@@ -27,28 +27,25 @@ body {
   min-height: 100vh;
 }
 
-body {
-  cursor: url('../Cursor/point.png') 10 10, auto;
-}
+/*=======================================================================*/
 
-*:active {
-  cursor: url('../Cursor/click.png') 10 10 , auto;
-}
-
-*, button, a, .btn {
+/*=== Cursor Changes ===*/
+/* Pointer cursor for EVERYTHING */
+html, body, *, *::before, *::after {
   cursor: url('../Cursor/point.png') 10 10, auto !important;
 }
-
-*:active {
+/* Click cursor for ACTIVE elements */
+html:active, body:active, *:active {
   cursor: url('../Cursor/click.png') 10 10, auto !important;
 }
 
-
+/*=======================================================================*/
 
 h1, h2, h3, h4, h5, h6, nav, .btn {
   font-family: 'Montserrat', sans-serif;
   color: var(--primary);
   text-align: center;
+  cursor: pointer;
 }
 
 /*ADDED H1 Size for hero header*/
@@ -155,6 +152,8 @@ footer {
   padding: 1rem;
 }
 
+
+/*======================================================================*/
 /* === HOME PAGE === */
 main.home-layout {
       display: grid;
@@ -248,7 +247,7 @@ main.home-layout {
     }
   .hero-image {
     width: 100%;
-    height: 70vh;               /* good desktop height */
+    height: 70vh;               
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -259,6 +258,29 @@ main.home-layout {
         background-position: top; 
     }
   }
+/*======================================================================*/
+
+/*======================================================================*/
+/* === CONTACT PAGE === */
+main.contact-layout {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--neutral);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+  text-align: left; /* changed from center */
+.contact-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center; /* keep heading centered */
+}
 
 
 
@@ -492,36 +514,7 @@ background-color: #ffa000;
   color: var(--dark);
 }
 
-/* === CONTACT PAGE === */
-main.contact-layout {
-  flex-grow: 1;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  background: var(--neutral);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.contact-info {
-  text-align: left; /* changed from center */
-}
-
-.contact-info h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 1rem;
-  text-align: center; /* keep heading centered */
-}
-
-.contact-info p {
-  margin-bottom: 1.5rem;
-  color: var(--dark);
-}
-
 /* === JOIN PAGE === */
-
 
 form {
   display: flex;
