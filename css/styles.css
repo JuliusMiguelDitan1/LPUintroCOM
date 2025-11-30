@@ -17,7 +17,9 @@
 /*===Changed the entire body background (Allen) */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: url('../background/paw_pattern.jpg'); /* Subtle paw pattern background */
+  background: url('../background/background.png'); /* Subtle paw pattern background */
+  background-size: cover;
+  background-attachment: fixed;
   color: var(--dark);
   line-height: 1.6;
   display: flex;
@@ -28,11 +30,38 @@ body {
 h1, h2, h3, h4, h5, h6, nav, .btn {
   font-family: 'Montserrat', sans-serif;
   color: var(--primary);
+  text-align: center;
+}
+
+/*ADDED H1 Size for hero header*/
+.h1hero {
+    font-size: 2rem;
+}
+
+
+.logocontainer {
+    text-align: left;
+    margin-left: 20px;
 }
 
 a {
   text-decoration: none;
 }
+/* === Animation === */
+
+.fade-element {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: adds a slight "fade up" effect */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* This makes the element visible even if JS fails or is blocked */
+}
+
+/* Class added by JavaScript when in viewport */
+.fade-element.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* === HEADER & NAVIGATION === */
 header {
@@ -187,6 +216,35 @@ main.home-layout {
     .btn:hover {
       background-color: #004d40;
     }
+
+    /* === Additional (Homepage) === */
+    .cta { 
+      font-weight: 600; 
+    }
+    .spacer {
+      margin-top: 2rem;
+    }
+  .image-border {
+    border: 10px solid transparent; 
+    border-image: url( ../animal_image/White.png ) 30 round;
+    }
+  .hero-image {
+    width: 100%;
+    height: 70vh;               /* good desktop height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+/* 📱 Mobile fix */
+  @media (max-width: 768px) {
+    .hero-image {
+        height: 40vh;           /* shorter height for mobile */
+        background-position: top; /* show important part of image */
+    }
+  }
+
+
 
 /* === ABOUT PAGE === */
 main.about-layout {
