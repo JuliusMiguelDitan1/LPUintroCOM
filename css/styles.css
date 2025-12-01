@@ -274,6 +274,7 @@ main.contact-layout {
 
 .contact-info {
   text-align: left; /* changed from center */
+}
 .contact-info h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -301,7 +302,7 @@ main.about-layout {
 
 .about-layout img {
     display: block;
-    max-width: 550px;
+    max-width: 350px;
     margin: 0 auto 1rem; /* centers horizontally */
 }
 
