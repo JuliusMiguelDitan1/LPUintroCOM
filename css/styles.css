@@ -32,11 +32,11 @@ body {
 /*=== Cursor Changes ===*/
 /* Pointer cursor for EVERYTHING */
 html, body, *, *::before, *::after {
-  cursor: url('../Cursor/point.png') 10 10, auto !important;
+  cursor: url('../Cursor/point.png') 5 5, auto !important;
 }
 /* Click cursor for ACTIVE elements */
 html:active, body:active, *:active {
-  cursor: url('../Cursor/click.png') 10 10, auto !important;
+  cursor: url('../Cursor/click.png') 5 5, auto !important;
 }
 
 /*=======================================================================*/
