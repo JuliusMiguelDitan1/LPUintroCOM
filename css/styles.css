@@ -275,7 +275,6 @@ main.contact-layout {
 .contact-info {
   text-align: left; /* changed from center */
 }
-
 .contact-info h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -291,6 +290,40 @@ main.contact-layout {
 
 /*======================================================================*/
 
+.social-media h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin: 10px 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.social-media a i {
+    font-size: 24px;
+}
+
+/* Hover effect */
+.social-media a:hover {
+    color: #ff7f50;
+    transform: translateX(5px);
+}
 
 /*======================================================================*/
 /* === ABOUT PAGE === */
@@ -310,7 +343,7 @@ main.about-layout {
 
 .about-layout img {
     display: block;
-    max-width: 550px;
+    max-width: 350px;
     margin: 0 auto 1rem; /* centers horizontally */
 }
 
