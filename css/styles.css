@@ -66,16 +66,63 @@ a {
 
 .fade-element {
     opacity: 0;
-    transform: translateY(20px); /* Optional: adds a slight "fade up" effect */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    /* This makes the element visible even if JS fails or is blocked */
+    transform: translateY(25px) scale(0.98);
+    transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Class added by JavaScript when in viewport */
 .fade-element.is-inview {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
+
+.wave-text span {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Wave animation */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Glow animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 1px #ccff90, 0 0 2px #ccff90;
+    }
+    100% {
+        text-shadow: 0 0 2px #ccff90, 0 0 4px #ccff90;
+    }
+}
+/* Delays for each letter */
+.wave-text span:nth-child(1)  { animation-delay: 0s; }
+.wave-text span:nth-child(2)  { animation-delay: 0.2s; }
+.wave-text span:nth-child(3)  { animation-delay: 0.4s; }
+.wave-text span:nth-child(4)  { animation-delay: 0.6s; }
+.wave-text span:nth-child(5)  { animation-delay: 0.8s; }
+.wave-text span:nth-child(6)  { animation-delay: 1s; }
+.wave-text span:nth-child(7)  { animation-delay: 1.2s; }
+.wave-text span:nth-child(8)  { animation-delay: 1.4s; }
+.wave-text span:nth-child(9)  { animation-delay: 1.6s; }
+.wave-text span:nth-child(10) { animation-delay: 1.8s; }
+.wave-text span:nth-child(11) { animation-delay: 2s; }
+.wave-text span:nth-child(12) { animation-delay: 2.2s; }
+.wave-text span:nth-child(13) { animation-delay: 2.4s; }
+.wave-text span:nth-child(14) { animation-delay: 2.6s; }
+.wave-text span:nth-child(15) { animation-delay: 2.8s; }
+.wave-text span:nth-child(16) { animation-delay: 3s; }
+.wave-text span:nth-child(17) { animation-delay: 3.2s; }
+.wave-text span:nth-child(18) { animation-delay: 3.4s; }
+.wave-text span:nth-child(19) { animation-delay: 3.6s; }
+.wave-text span:nth-child(20) { animation-delay: 3.8s; }
+.wave-text span:nth-child(21) { animation-delay: 4s; }
+.wave-text span:nth-child(22) { animation-delay: 4.2s; }
+.wave-text span:nth-child(23) { animation-delay: 4.4s; }
+.wave-text span:nth-child(24) { animation-delay: 4.6s; }
+.wave-text span:nth-child(25) { animation-delay: 4.8s; }
+/* Wave animation */
 
 
 /* === HEADER & NAVIGATION === */
@@ -90,7 +137,7 @@ header h1 {
   font-weight: 800;
 }
 
-/* === Made the navbar move along as you scroll, Currently checking if I could animate it by JS === */
+/* === Made the navbar move along as you scroll === */
 .navbar {
   background: #004d40;
   position: sticky; /*made sticky*/
@@ -416,6 +463,18 @@ main.about-layout {
 }
 
 /* Button */
+.card {
+  background-color: #f9f9f9;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* stack content vertically */
+  align-items: center;    /* center content horizontally */
+}
+
 .card__btn {
   background-color: var(--accent);
   border: none;
@@ -425,6 +484,7 @@ main.about-layout {
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: auto; /* push button to bottom of card */
 }
 
 .card__btn:hover {
@@ -440,72 +500,73 @@ img:not(.lazy) {
   opacity: 1;
 }
 
+
 /*=== Adopt Page Layout ===*/
 .adopt-container {
-max-width: 900px;
-margin: 2rem auto;
-padding: 1.5rem;
-display: flex;
-gap: 2rem;
-align-items: flex-start;
-justify-content: center;
-background: #ffffff;
-border-radius: 12px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;     
+  justify-content: center;  
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-direction: column;   
+  text-align: center;       
 }
-
 
 .adopt-card img {
-width: 320px;
-height: auto;
-border-radius: 12px;
-object-fit: cover;
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
-
 
 .adopt-info {
-display: flex;
-flex-direction: column;
-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;     
 }
-
 
 #adoptName {
-font-size: 2rem;
-font-weight: 800;
+  font-size: 2rem;
+  font-weight: 800;
 }
-
 
 #adoptBreed {
-font-size: 1.3rem;
-font-weight: 600;
-color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 0.5rem 0;
 }
-
 
 #adoptDescription {
-line-height: 1.5;
-font-size: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
-
-/* Button same as card__btn */
 #adoptButton {
-background-color: var(--accent);
-border: none;
-padding: 0.6rem 1.2rem;
-border-radius: 5px;
-color: var(--dark);
-font-weight: 700;
-cursor: pointer;
-transition: background-color 0.3s ease;
-width: fit-content;
+  background-color: var(--accent);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  color: var(--dark);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;  /* center button */
 }
-
 
 #adoptButton:hover {
-background-color: #ffa000;
+  background-color: #ffa000;
 }
+
 
 /* === DIRECTORY PAGE === */
 .company-container.grid {
