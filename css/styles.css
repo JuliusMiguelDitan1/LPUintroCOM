@@ -441,7 +441,12 @@ main.about-layout {
   gap: 2rem;
 }
 .card {
-  background-color: #f9f9f9;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('../background/b2.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 2px solid var(--primary);
   border-radius: 10px;
   padding: 1rem;
