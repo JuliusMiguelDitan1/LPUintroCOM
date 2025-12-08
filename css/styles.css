@@ -199,8 +199,6 @@ footer {
   padding: 1rem;
 }
 
-
-/*======================================================================*/
 /* === HOME PAGE === */
 main.home-layout {
       display: grid;
@@ -337,9 +335,7 @@ main.home-layout {
         background-position: top; 
     }
   }
-/*======================================================================*/
 
-/*======================================================================*/
 /* === CONTACT PAGE === */
 main.contact-layout {
   flex-grow: 1;
@@ -367,7 +363,6 @@ main.contact-layout {
   color: var(--dark);
 }
 
-/*======================================================================*/
 
 .social-media h3 {
     font-size: 20px;
@@ -404,7 +399,6 @@ main.contact-layout {
     transform: translateX(5px);
 }
 
-/*======================================================================*/
 /* === ABOUT PAGE === */
 main.about-layout {
   flex-grow: 1;
@@ -423,22 +417,21 @@ main.about-layout {
 .about-layout img {
     display: block;
     max-width: 350px;
-    margin: 0 auto 1rem; /* centers horizontally */
+    margin: 0 auto 1rem; 
 }
 
 .author-info h2 {
-    text-align: center; /* keep heading centered */
+    text-align: center; 
 }
 
 .author-bio p {
-    text-align: left;   /* force paragraphs left-aligned */
+    text-align: left;  
 }
 
 .author-bio strong {
   color: var(--primary);
 }
 
-/*======================================================================*/
 
 /* === CATALOG PAGE === */
 .poi-grid {

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<header class="wave-container">
+<header class="wave-container fade-element">
   <h1 class="wave-text">
     <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
     <span>&nbsp;</span>
@@ -26,13 +26,13 @@
   </h1>
 </header>
 
-  <nav class="navbar">
+  <nav class="navbar fade-element">
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links fade-element" id="navLinks">
       <a href="home.html">Home</a>
       <a href="catalog.html">Catalogs</a>
       <a href="directory.html">Directory</a>
@@ -41,7 +41,8 @@
     </div>
   </nav>
 
-    <main>
+  <span>
+    <main class="fade-element">
   <template id="card-template">
     <article class="card">
       <h2 class="card__title"></h2>
@@ -54,7 +55,7 @@
       <button class="card__btn">Adopt Me</button>
     </article>
   </template>
-
+  </span>
   <!-- 👇 This is the container your JS is looking for -->
   <section class="poi-grid"></section>
 </main>
