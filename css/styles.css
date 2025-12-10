@@ -616,11 +616,26 @@ main.contact-layout {
   display: flex;
   justify-content: center; 
   margin: 2rem 0; 
+
+  /* Responsive wrapper */
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* optional, keeps desktop neat */
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
 }
 
 .map-container iframe {
   border: 5px solid #f39923; 
-  border-radius: 10px;       
+  border-radius: 10px;  
+  
+  /* Make iframe responsive */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* === ABOUT PAGE === */
