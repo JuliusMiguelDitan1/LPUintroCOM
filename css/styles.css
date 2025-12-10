@@ -998,7 +998,7 @@ input[type="submit"]:hover {
   .adopt-container {flex-direction: column; text-align: center;}
   .adopt-card img {width: 100%; max-width: 400px; margin: 0 auto;}
   .modal { padding: 0; }
-  .modal-content { width: 100vw; height: auto; max-height: 100vh;}
+  .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
   .close {font-size: 2rem; top: 0.5rem; right: 0.5rem;}
   .map-container { position: relative; width: 100%; max-width: 600px; /* optional, keeps desktop neat */ 
   padding-bottom: 56.25%; /* 16:9 ratio */ height: 0; overflow: hidden;}
